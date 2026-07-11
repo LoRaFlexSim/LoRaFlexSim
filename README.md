@@ -61,6 +61,32 @@ Scenario names are user-defined labels for the jamming CLI. They do not select b
 
 CSV outputs are generated automatically at the end of each simulation run and can be compared across regenerated scenarios.
 
+Dashboard exports are written under a timestamped directory:
+
+```text
+results/dashboard_exports/<timestamp>/
+```
+
+For CLI commands, `<--out>` corresponds to the value provided to the `--out` option. A `loraflexsim run` execution writes CSV outputs and the effective configuration under:
+
+```text
+<--out>/
+  config_used.yaml
+  per_run/run_summary.csv
+  raw/packet_events_*.csv
+  raw/node_metrics_*.csv
+  raw/channel_timeseries_*.csv
+  raw/sf_timeseries_*.csv
+```
+
+A `loraflexsim campaign` execution writes aggregate campaign outputs under:
+
+```text
+<--out>/
+  aggregate/campaign_summary.csv
+  ...
+```
+
 ### Figure generation
 
 Generate figures from the exported or regenerated CSV outputs so plots can be rebuilt from documented experiment data.
