@@ -89,7 +89,19 @@ A `loraflexsim campaign` execution writes aggregate campaign outputs under:
 
 ### Figure generation
 
-Generate figures from the exported or regenerated CSV outputs so plots can be rebuilt from documented experiment data.
+Generate figures from CSV outputs that are already present in `results/`:
+
+```powershell
+python generate_figures.py
+```
+
+For direct QoS CLI usage, run:
+
+```powershell
+python -m qos_cli.lfs_plots --in results --config qos_cli/scenarios.yaml --out qos_cli/figures
+```
+
+These commands consume existing CSV results in `results/`. They do not automatically launch the main simulations.
 
 ## Recommended public entry path
 
