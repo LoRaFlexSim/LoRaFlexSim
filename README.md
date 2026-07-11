@@ -30,7 +30,32 @@ Use the dashboard for exploratory runs, quick parameter checks, and interactive 
 
 ### Command-line execution
 
-Use command-line runs for repeatable paper-style experiments, scripted campaign execution, and documented scenario configurations.
+Use command-line runs for repeatable paper-style experiments, scripted campaign execution, and documented scenario configurations. The jamming CLI accepts `run`, `campaign`, and `aggregate` subcommands; the examples below only use options supported by `mobilesfrdth/jamming/cli.py`.
+
+```powershell
+loraflexsim --help
+loraflexsim run --help
+```
+
+Run a short ADR-enabled scenario on three channels with a static jammed channel:
+
+```powershell
+loraflexsim run --scenario paper_fast --nodes 10 --adr on --seed 1 --sim-time 60 --channels 868.1,868.3,868.5 --jammed-channel 868.1 --channel-selection static --time-bin-size 10 --out results/cli_runs/paper_fast_seed1
+```
+
+Run the same kind of short scenario without ADR on a single channel:
+
+```powershell
+loraflexsim run --scenario paper_no_adr --nodes 10 --adr off --seed 2 --sim-time 60 --channels 868.1 --jammed-channel 868.1 --channel-selection static --time-bin-size 10 --out results/cli_runs/paper_no_adr_seed2
+```
+
+Run a compact campaign across several node counts, both ADR modes, and an inclusive seed range:
+
+```powershell
+loraflexsim campaign --scenario paper_campaign --nodes 10,20 --adr both --seeds 1:3 --sim-time 60 --channels 868.1,868.3,868.5 --jammed-channel 868.1 --channel-selection static --time-bin-size 10 --out results/cli_campaigns/paper_campaign
+```
+
+Scenario names are user-defined labels for the jamming CLI. They do not select built-in presets unless a YAML or JSON configuration is passed with `--config`.
 
 ### CSV outputs
 
