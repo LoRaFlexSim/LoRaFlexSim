@@ -1,6 +1,6 @@
 # Guide utilisateur — Dashboard (voie principale)
 
-Le dashboard est la voie principale pour utiliser LoRaFlexSim-2.
+Le dashboard est la voie principale pour utiliser LoRaFlexSim.
 
 ## Lancement (Windows 11)
 

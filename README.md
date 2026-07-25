@@ -1,6 +1,6 @@
-# LoRaFlexSim-2
+# LoRaFlexSim
 
-LoRaFlexSim-2 is a Python LoRa/LoRaWAN simulator for running campaigns, aggregating results, and visualizing network metrics.
+LoRaFlexSim is a Python LoRa/LoRaWAN simulator for running campaigns, aggregating results, and visualizing network metrics.
 
 ## Quick start: launch the dashboard
 
@@ -150,6 +150,14 @@ python -m loraflexsim --help
 | `qos_cli/` | specialized | advanced QoS campaigns |
 | `docs/archive_or_research/` | historical | migration and research memory |
 | `pretest_campagne/` | historical/research | reproductions and comparisons |
+
+## Documentation maintenance
+
+The documentation map and the prioritized README improvement backlog are available in
+[`docs/README.md`](docs/README.md) and
+[`docs/readme_harmonization_plan.md`](docs/readme_harmonization_plan.md). The canonical
+product name is always **LoRaFlexSim**; the checkout directory name is not part of the
+product name.
 
 ## Removals / migration
 

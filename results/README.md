@@ -1,10 +1,10 @@
 # `results/`
 
-## Positionnement du dossier dans LoRaFlexSim-2
+## Positionnement du dossier dans LoRaFlexSim
 
 Le dossier `results/` regroupe des **sorties versionnées**, des exports consolidés et des
 artefacts de validation conservés dans le dépôt pour documenter des campagnes déjà
-exécutées. Dans LoRaFlexSim-2, il sert donc surtout de **référence d'analyse**, d'**archive
+exécutées. Dans LoRaFlexSim, il sert donc surtout de **référence d'analyse**, d'**archive
 reproductible** et d'**exemple concret de résultats attendus**, plutôt que de point de départ
 pour lancer une nouvelle simulation.
 
@@ -29,7 +29,7 @@ pour lancer une nouvelle simulation.
 ## Quand ne pas l'utiliser comme point d'entrée
 
 - Ne commencez pas par `results/` pour découvrir **comment installer, lancer ou configurer**
-  LoRaFlexSim-2.
+  LoRaFlexSim.
 - N'utilisez pas ce dossier comme source canonique du workflow principal : pour démarrer,
   ouvrez plutôt `README.md`, puis `docs/user_guide_dashboard.md` ou
   `docs/user_guide_cli.md`.

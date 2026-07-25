@@ -3,9 +3,9 @@
 ## Positionnement local dans ce dépôt
 
 Le dossier `flora-master/` est une **copie externe de référence liée à FLoRa** conservée dans
-LoRaFlexSim-2 pour la **comparaison scientifique**, la **reproduction méthodologique** et
+LoRaFlexSim pour la **comparaison scientifique**, la **reproduction méthodologique** et
 l'**archivage**. Il ne constitue pas le point d'entrée principal du projet : pour utiliser ou
-faire évoluer LoRaFlexSim-2, commencez plutôt par `README.md`, `loraflexsim/` et la
+faire évoluer LoRaFlexSim, commencez plutôt par `README.md`, `loraflexsim/` et la
 documentation sous `docs/`.
 
 ## Statut du dossier
@@ -34,7 +34,7 @@ documentation sous `docs/`.
 
 FLoRa reste le cadre de référence scientifique auquel ce dossier renvoie : on y retrouve une base
 OMNeT++/LoRaWAN utile pour inspecter des configurations, relire certains scénarios historiques et
-comparer des hypothèses radio avec celles reprises dans LoRaFlexSim-2.
+comparer des hypothèses radio avec celles reprises dans LoRaFlexSim.
 
 ## Point d'entrée / fichiers à ouvrir d'abord
 

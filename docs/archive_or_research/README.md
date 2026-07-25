@@ -1,6 +1,6 @@
 # Archive / Research
 
-This directory groups **historical** and **research-oriented** LoRaFlexSim-2 content.
+This directory groups **historical** and **research-oriented** LoRaFlexSim content.
 
 ## Purpose
 
