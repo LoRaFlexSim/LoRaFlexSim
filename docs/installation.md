@@ -1,6 +1,6 @@
 # Installation (Windows 11 first)
 
-This guide describes the public installation path for LoRaFlexSim-2.
+This guide describes the public installation path for LoRaFlexSim.
 
 ## What is officially supported today
 

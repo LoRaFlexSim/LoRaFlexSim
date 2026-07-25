@@ -22,15 +22,15 @@
         "status": "skipped",
         "failed": 0,
         "elapsed_seconds": 0.0,
-        "output_path": "/workspace/LoRaFlexSim-2/pretest_campagne/scenario_c/step1/results",
-        "status_file": "/workspace/LoRaFlexSim-2/pretest_campagne/scenario_c/step1/results/run_status_step1.csv"
+        "output_path": "pretest_campagne/scenario_c/step1/results",
+        "status_file": "pretest_campagne/scenario_c/step1/results/run_status_step1.csv"
       },
       "step2": {
         "status": "ok",
         "failed": 0,
         "elapsed_seconds": 0.0,
-        "output_path": "/workspace/LoRaFlexSim-2/pretest_campagne/scenario_c/step2/results",
-        "status_file": "/workspace/LoRaFlexSim-2/pretest_campagne/scenario_c/step2/results/run_status_step2.csv",
+        "output_path": "pretest_campagne/scenario_c/step2/results",
+        "status_file": "pretest_campagne/scenario_c/step2/results/run_status_step2.csv",
         "quality": {
           "simulation_quality": "ok",
           "reasons": []
@@ -39,8 +39,8 @@
     }
   ],
   "output_paths": {
-    "step1_results": "/workspace/LoRaFlexSim-2/pretest_campagne/scenario_c/step1/results",
-    "step2_results": "/workspace/LoRaFlexSim-2/pretest_campagne/scenario_c/step2/results"
+    "step1_results": "pretest_campagne/scenario_c/step1/results",
+    "step2_results": "pretest_campagne/scenario_c/step2/results"
   },
   "report": {
     "kind": "partial",

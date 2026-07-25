@@ -1,6 +1,6 @@
 # Migration des anciennes surfaces (historique)
 
-Ce document archive la transition vers la surface publique actuelle de LoRaFlexSim-2.
+Ce document archive la transition vers la surface publique actuelle de LoRaFlexSim.
 
 ## Surfaces historiques concernées
 

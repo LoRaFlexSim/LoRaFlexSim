@@ -1,6 +1,6 @@
 # Exports CSV du dashboard
 
-Cette page décrit les fichiers générés par le bouton **Export CSV** du dashboard LoRaFlexSim-2. Les exports sont écrits dans un dossier horodaté de la forme `results/dashboard_exports/YYYY-MM-DD_HH-MM-SS/`.
+Cette page décrit les fichiers générés par le bouton **Export CSV** du dashboard LoRaFlexSim. Les exports sont écrits dans un dossier horodaté de la forme `results/dashboard_exports/YYYY-MM-DD_HH-MM-SS/`.
 
 Tous les CSV sont encodés en **UTF-8 avec BOM** (`utf-8-sig`) afin de s'ouvrir correctement dans Excel sous Windows 11. Le séparateur est la **virgule**.
 

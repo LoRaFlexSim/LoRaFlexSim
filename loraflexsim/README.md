@@ -1,6 +1,6 @@
 # `loraflexsim/`
 
-This folder contains the active core of LoRaFlexSim-2.
+This folder contains the active core of LoRaFlexSim.
 
 ## What you will find here
 

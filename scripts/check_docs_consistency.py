@@ -5,7 +5,8 @@ Vérifie :
 1) liens/chemins morts dans les fichiers Markdown ;
 2) références obsolètes à anciens modules/CLI ;
 3) cohérence minimale Windows 11 vs bash ;
-4) cohérence des noms de points d'entrée (loraflexsim + dashboard Panel).
+4) cohérence des noms de points d'entrée (loraflexsim + dashboard Panel) ;
+5) utilisation exclusive du nom produit canonique LoRaFlexSim.
 
 Le script retourne un code de sortie non nul si au moins une erreur est détectée.
 """
@@ -77,6 +78,8 @@ ENTRYPOINT_EXPECTED_FILES = (
     Path("docs/installation.md"),
     Path("docs/user_guide_dashboard.md"),
 )
+
+FORBIDDEN_PRODUCT_NAME_RE = re.compile(r"\bLoRaFlexSim" + r"-2\b", re.IGNORECASE)
 
 PATH_LIKE_PREFIXES = (
     "docs/",
@@ -280,15 +283,39 @@ def _check_entrypoint_names(path: Path, text: str) -> list[Violation]:
     return violations
 
 
+def _check_product_name(path: Path, text: str) -> list[Violation]:
+    """Reject checkout/version suffixes presented as part of the product name."""
+    return [
+        Violation(
+            file=path,
+            line=_line_number(text, match.start()),
+            kind="product-name",
+            detail="Nom produit obsolète détecté ; utiliser `LoRaFlexSim`.",
+        )
+        for match in FORBIDDEN_PRODUCT_NAME_RE.finditer(text)
+    ]
+
+
 def run(globs: Iterable[str]) -> list[Violation]:
     violations: list[Violation] = []
-    for path in _iter_docs(globs):
+    selected_docs = _iter_docs(globs)
+    for path in selected_docs:
         text = path.read_text(encoding="utf-8", errors="ignore")
         violations.extend(_check_markdown_links(path, text))
         violations.extend(_check_inline_paths(path, text))
         violations.extend(_check_legacy_references(path, text))
         violations.extend(_check_windows_bash_consistency(path, text))
         violations.extend(_check_entrypoint_names(path, text))
+        violations.extend(_check_product_name(path, text))
+
+    # Naming is a repository-wide invariant, including specialized READMEs that are
+    # deliberately outside the stricter link and entrypoint audit surface.
+    selected_set = set(selected_docs)
+    for path in _iter_docs(("**/*.md",)):
+        if path in selected_set:
+            continue
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        violations.extend(_check_product_name(path, text))
     return violations
 
 
